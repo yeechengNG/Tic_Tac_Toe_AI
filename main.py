@@ -63,7 +63,6 @@ def check_win(player, check_board = board):
     for row in range(BOARD_ROWS):
         if check_board[row][0] == player and check_board[row][1] == player and check_board[row][2] == player:
             return True
-        
     
     if check_board[0][0] == player and check_board[1][1] == player and check_board[2][2] == player:
         return True
@@ -122,7 +121,6 @@ def best_move(difficulty):
                 return True
     
     elif difficulty == "medium":
-        # Simple heuristic for medium level (e.g., prioritize center and corners)
         # Example: prioritize center, then corners, then random
         moves = [(1, 1), (0, 0), (0, 2), (2, 0), (2, 2), (0, 1), (1, 0), (1, 2), (2, 1)]
         for move in moves:
